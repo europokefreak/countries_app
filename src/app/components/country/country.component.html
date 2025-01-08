@@ -1,0 +1,26 @@
+<mat-card style="margin: auto; margin-top:5rem; max-width: 25%;   background: linear-gradient(
+    180deg,
+    #f38e00,
+    #fae039,
+    #ff33e0
+  );" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar [ngStyle]="{ 'background-image': 'url(' + country.flag + ')', 'background-size': 'cover', 'background-position': 'center' }"></div>
+      <button mat-fab extended style="margin-left: auto;" [routerLink]="['']"> 
+        <mat-icon>arrow_back</mat-icon>
+        Back
+      </button>
+      <mat-card-title>{{ country.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+        <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+            <mat-expansion-panel-header>
+              <mat-panel-title> Show more details </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Capital: {{country.capital}}</p>
+            <p>Region: {{country.region}}</p>
+        </mat-expansion-panel>
+    </mat-card-actions>
+  </mat-card>
+  
+

@@ -1,0 +1,11 @@
+<mat-card  
+[routerLink]="['/country', country.id]" 
+class="country-card animate__animated animate__bounce animate__slideInDown"
+appearance="outlined"
+>
+<mat-card-content>
+    {{ country.name }}
+    <img style= "margin-left: 1rem; max-height: 1.5rem;" mat-card-image [src]="country.flag" alt="{{ country.name }} flag">
+</mat-card-content>
+
+</mat-card>

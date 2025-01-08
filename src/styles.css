@@ -1,0 +1,46 @@
+.card-container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.country-card {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.country-card:hover {
+  transform: scale(1.5);
+}
+
+.view-buttons {
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: right;
+}
+
+.grid-view {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.grid-view .country-card {
+  flex: 0 1 calc(33.333% - 1rem);
+}
+
+.list-view {
+  flex-direction: column;
+}
+
+.list-view .country-card {
+  flex: 0 1 100%;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

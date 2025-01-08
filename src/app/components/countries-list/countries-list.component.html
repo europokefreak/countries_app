@@ -1,0 +1,21 @@
+<div>
+    <h1>Countries</h1>
+
+    <div class="view-buttons">
+        <button mat-fab color="primary" (click)="setView('grid')">
+            <mat-icon>grid_view</mat-icon>
+        </button>
+        <button mat-fab color="accent" (click)="setView('list')">
+            <mat-icon>format_list_bulleted</mat-icon>
+        </button>
+    </div>
+
+    <div *ngIf="loading" class="spinner-container">
+      <mat-spinner></mat-spinner>
+    </div>
+
+    <div *ngIf="viewMode === 'list'" class="card-container list-view">
+      <app-card *ngFor="let country of countries" [country]="country" ></app-card>
+    </div>
+    <app-grid *ngIf="viewMode === 'grid'" [countries]="countries"></app-grid>
+</div>
